@@ -9,6 +9,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.9.1/firebase-database-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.9.1/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.9.1/firebase-storage-compat.js"></script>
+    <!-- <script type="text/javascript" src="./src/pages/index/myJS1.js"></script> -->
     <link rel="stylesheet" crossorigin href="/bill/assets/showPhoto-B2-ufKkN.css">
   </head>
   <body>
@@ -68,7 +69,7 @@
          }
    }
  
-   function  downloadPic(company,myDate,deliver,photoArr,po) {
+    function  downloadPic(company,myDate,deliver,photoArr,po) {
      // Create a reference to the file we want to download
      var storage = firebase.storage();
  
@@ -115,10 +116,12 @@
  
  };
    
-   function  readInfo(){
+
+
+ function  readInfo(){
     
-     document.getElementById("nav").style.visibility="hidden";//隐藏
-      photoArr = JSON.parse(window.sessionStorage.getItem('photoArr'));
+     //document.getElementById("nav").style.visibility="hidden";//隐藏
+      photoArr = window.sessionStorage.getItem('photoArr').split(',');
               myDate = window.sessionStorage.getItem('myDate');
         deliver = window.sessionStorage.getItem('deliver');
        var currentNo = document.getElementById("currentNo");
@@ -150,8 +153,9 @@
      firebaseAuth();
    }
    
-   function firebaseAuth()
+    function firebaseAuth()
    {
+    console.log("firebase=",firebase);
      firebase.auth().signInWithEmailAndPassword("kjhlr@hotmail.com", "671691")
       .then(function() {
         readInfo();
@@ -175,7 +179,7 @@
      //<h1 style="margin-bottom:0;">主要的网页标题</h1>//#0003D1  #FFA500
      window.onload = function() {
         firebaseInit();
-        //readInfo();
+       
      };  
    </script> 
    
