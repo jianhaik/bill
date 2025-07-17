@@ -124,223 +124,6 @@ ul2 {
 }
 
 
-ul2 select {
-  width: 40%;
-  height: 80%;
-  line-height: 80%;
-  align-items: center; /* 垂直居中 */
-  text-align-last: center;
-  justify-content: center; /* 水平居中 */
-
-  /* vertical-align:top; */
-
-  padding-left: 5%; 
-  margin-top: 0%;
-  margin-left:8%; 
-  margin-bottom:0%;
-  border-radius: 20px;
-  font-size: medium;
-  color: white; /* 白色文本 */
-  border: 2px solid  black;
-
-  background-color: #04AA6D; /* 绿色背景 */
-  cursor: pointer; /* 指针/手形图标 */
-}
-
-select:after {
-  border-color: red;
-}
-.select-selected {
-  color: #ffffff;
-  
-  border: 2px solid rgb(201, 172, 6); 
-  border-color: red;
-  cursor: pointer;
-}
-/* 下拉按钮样式 */
-.dropbtn {
-  width: 60%;
-  height: 80%;
-  line-height: 80%;
-
-  background-color: #04AA6D; /* 绿色背景 */
-  border: 2px solid  black;
-  color: white; /* 白色文本 */
-  /* vertical-align:middle; */
-  border-radius: 20px;
-
-  margin-top: 1%;
-  margin-left:12%; 
-  margin-bottom:1%;
-  /* padding: 10px 24px; 内边距离、 */
-  font-size: medium;
-  
-  cursor: pointer; /* 指针/手形图标 */
-  display: flex;
-
-  align-items: center; /* 垂直居中 */
-  text-align-last: center;
-  justify-content: center; /* 水平居中 */
- 
-}
-
-/* 容器 <div> - 需要定位下拉内容 */
-  .dropdown {
-    width: 100%;
-  height: 100%;
- float:right;
-    /* position: relative;
-    display: inline-block; */
-
-}        
-/* 下拉内容 (默认隐藏) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #a8e9be;
-    min-width: 120px;
-    box-shadow: 0px 8px 16px 0px rgba(150, 13, 13, 0.2);
-    margin-left: 2%;
-    z-index: 0;
-}
-/* 下拉菜单的链接 */
-.dropdown-content a {
-    color: black;
-    padding: 4px 16px;
-    text-decoration: none;
-    display: block;
-}
-/* 鼠标移上去后修改下拉菜单链接颜色 */
-.dropdown-content a:hover {
-  background-color: #7f65c5
-}
-/* 在鼠标移上去后显示下拉菜单 */
-.dropdown:hover .dropdown-content {
-    /* display: block; */
-    z-index:100;
-}
-/* 当下拉内容显示后修改下拉按钮的背景颜色 */
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
-
-.actionClass {
-    display: none;
-    position: absolute;
-    background-color: #a8e9be;
-    min-width: 120px;
-    box-shadow: 0px 8px 16px 0px rgba(150, 13, 13, 0.2);
-    margin-left: 2%;
-    margin-top: 5%;
-    z-index: 80;
-}
-/* 下拉菜单的链接 */
-.actionClass a {
-    color: black;
-    padding: 4px 16px;
-    border-radius: 20px;    
-    border-Width: 2px;
-    border-Color: 'Red';
-    align-items: 'center';
-    text-Align: 'center';
-    text-decoration: none;
-    display: block;
-}
-/* 鼠标移上去后修改下拉菜单链接颜色 */
-.actionClass a:hover {
-  background-color: #7f65c5
-}
-/* .actionClass p:hover {
-  background-color: #129247} */
-.actionClass span:hover {
-  background-color: #dadd0d
-}
-.actionClass span {
-  background-color: #7f65c5
-}
-
-#close-button {
-  color: red;
-  
-            float: right;
-            cursor: pointer;
-        }
-.editClass {
-  display: none;
-  position: fixed; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  width: 90vw; 
-  height: 80vh; 
-  background-color: #ccc; 
-  padding: 10px; 
-  z-index: 99;
-
-}
-
-.editClass label{
-  text-align: right;
-  width: 10%; 
-  
-}
-.editClass input, select ,option{
-  -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-  width: 50%; 
-  font-size: large;
-}
-#itemEdit1 {
-  text-align: right;
-  width: 28%; 
-  float: left;
-}
-#itemEdit2 {
-  text-align: right;
-  width: 40%; 
-  float: left;
-}
-#itemEdit3 {
-  text-align: right;
-  width: 20%; 
-  float: left;
-}
-
-.bottom{
-  float: right;
-  cursor: pointer;
-}
-#x-button{
-  color: red;  
-  float: right;
-  cursor: pointer;
-  /* background: orange; */
-  
-  
-}
-.bottom span:hover{
-  
-  background-color: #ccec82
-}
-
-.bottom button{
-    display: inline-block;
-    color: green;
-    padding: 4px 16px;
-    border-radius: 20px;    
-    border-Width: 2px;
-    border-Color: blue;
-    align-items: 'center';
-    text-Align: 'center';
-    width: 100%;
-}
-.bottom button:hover{
-  color: rgb(177, 29, 29);
-  background-color: #a6e909
-}
-
-
 
 ul3 {
     width: 29%; 
@@ -354,10 +137,16 @@ ul3 {
     background-color: rgb(63, 205, 134);
     margin: 0;
      position: relative;
+
+     /* 父元素变成弹性盒 */
+  display: flex;
+  
+  /* 所有子元素作为整体垂直居中 */
+  align-items: center;
 }
 
-ul3 input{
-  width: 70%;
+ul3 label {
+  width: 30%;
   height: 70%;
   padding-left: 13px;
   /* border: none; */
@@ -371,22 +160,43 @@ ul3 input{
   top: 50%;
   transform: translateY(-50%);
 }
+
+ul3 p {
+   width: 30%;
+  height: 70%;
+  padding-left: 13px;
+  /* border: none; */
+  outline: none;
+  font-size: larger;
+  border-radius: 21px;
+  border: 2px solid blue;
+  background: #eeecec;
+  color: rgb(75, 6, 204); /* 白色文本 */
+  position: absolute;
+  top: 10%;
+  transform: translateY(-50%);
+}
+
 ul3 button {
-  height: 21px;
-  width: 21px;
-  cursor: pointer;
+   width: 30%;
+  height: 70%;
+  /* cursor: pointer; */
   position: absolute;      
-  border: none;
-            outline: none;
-  background: none;
+  font-size: larger;
+  border-radius: 21px;
+  border: 2px solid blue;
+  background: #eeecec;
+  color: rgb(75, 6, 204); /* 白色文本 */
             top: 50%;
-  left: 80%;
+  left: 70%;
   transform: translate(-50%, -50%);
         }
-ul3 button:before{
-  content: "\f002";
+ul3 button:hover{
+cursor: pointer;
+
+  /* content: "\f002";
   font-family: FontAwesome;
-  color: #480c96;
+  color: #480c96; */
 }
 
 .content {
@@ -438,7 +248,7 @@ ul3 button:before{
 }
 
 </style>
-  <script type="module" crossorigin src="/bill/assets/navbar-CHNaYkRz.js"></script>
+  <script type="module" crossorigin src="/bill/assets/navbar-fNFWpwYQ.js"></script>
   <link rel="modulepreload" crossorigin href="/bill/assets/index-dfc2d82f-B975WVbO.js">
   <link rel="modulepreload" crossorigin href="/bill/assets/vendor-DuW90808.js">
   <link rel="stylesheet" crossorigin href="/bill/assets/vendor-CgCYLuRn.css">
@@ -457,8 +267,10 @@ ul3 button:before{
          
     </ul2>
     <ul3 >
-      <input type="text" id="searchID" placeholder="search ..." />
-      <!-- <button type="submit" onclick="addSheet()"></button> oninput="searchString()"-->
+      <label id="total" style="color:blue;">Total:0.00</label>
+     
+      <button id="download" >Download</button> 
+      
     </ul3>
 </nav>
 
